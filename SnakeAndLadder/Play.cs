@@ -16,7 +16,20 @@ namespace SnakeAndLadder
             Random random= new Random();
             Player1 = random.Next(0, 7);
 
-            Console.WriteLine(Player1);
+            int check1 = random.Next(0, 3);
+            int Position1 = 0;
+            switch(check1)
+            {
+                case 0:
+                    break; 
+                case 1:
+                    Position1 += Player1;
+                        break;
+                    case 2:
+                    Position1 -= Player1;
+                    break;
+
+            }
         }
     }
 }
