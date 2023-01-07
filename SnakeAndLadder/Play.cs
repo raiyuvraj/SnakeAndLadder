@@ -13,22 +13,27 @@ namespace SnakeAndLadder
 
         public void RollDice()
         {
-            Random random= new Random();
-            Player1 = random.Next(0, 7);
+            while (Position < 101)
+            {
+            
+            Random random = new Random();
+            Player1 = random.Next(0, 6);
+            Console.WriteLine(Player1);
 
             int check1 = random.Next(0, 3);
+                Console.WriteLine("Player option" +check1);
             int Position1 = 0;
-            switch(check1)
-            {
-                case 0:
-                    break; 
-                case 1:
-                    Position1 += Player1;
+                switch (check1)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        Position1 += Player1;
                         break;
                     case 2:
-                    Position1 -= Player1;
-                    break;
-
+                        Position1 -= Player1;
+                        break;
+                }
             }
         }
     }
